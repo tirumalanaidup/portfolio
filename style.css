@@ -1,0 +1,551 @@
+:root {
+    --text-color: #1a1c20;
+    --link-color: blue;
+    --background-color: #F4F1EA;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 50px;
+    height: 80px;
+}
+nav .left a {
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+nav .right a {
+    color: var(--text-color);
+    margin: 0 10px;
+}
+nav .right a:last-child {
+    color: var(--background-color);
+    background-color: black;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+nav .right a span {
+    margin-left: 5px;
+}
+
+/*section-1 hero*/
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin: 50px 0;
+    gap: 40px;
+}
+
+.hero-section .text {
+    flex: 5;
+}
+.hero-section .text h2 {
+    font-size: 45px;
+}
+.hero-section .text .links {
+    margin-top: 25px;
+    font-weight: 100;
+}
+.hero-section .text .links a {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 2px solid var(--link-color);
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: .1s;
+}
+.hero-section .text .links a:hover {
+    color: var(--text-color);
+    border: 2px solid var(--text-color);
+}
+.hero-section .headshot {
+    flex: 2;
+    display: flex;
+    justify-content: right;
+}
+.hero-section .headshot img {
+    border-radius: 50%;
+    width: 300px;
+}
+
+/*SECTION-2 Skills */
+.skills-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+.skills-section h2 {
+    text-align: center;
+    font-size: 35px;
+}
+.skills-section .text {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.skills-section .cells {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.skills-section .cells .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    width: 200px;
+    padding: 10px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin: 10px;
+}
+.skills-section .cells .cell span {
+    font-size: 15px;
+}
+.skills-section .cells .cell img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 2px;
+}
+
+@media (max-width: 850px) {
+    /*section-1 hero*/
+    .hero-section .text h2 {
+        font-size: 30px;
+    }
+}
+@media (max-width: 740px) {
+    /*section-1 hero*/
+    .hero-section {
+        flex-direction: column-reverse;
+    }
+    .hero-section .headshot img {
+        width: 250px;
+    }
+}
+@media (max-width: 600px) {
+    /*NAVBAR*/
+    nav {
+        padding: 0 20px;
+    }
+    nav .right a {
+        font-size: 22px;
+    }
+    nav .right a:last-child {
+        color: var(--text-color);
+        background-color: transparent;
+        padding: 0;
+    }
+    nav .right a span {
+        display: none;
+    }
+
+
+    /*Section-1: HERO*/
+    .hero-section {
+        padding: 0 20px;
+
+    }
+    .hero-section .text h2 {
+        font-size: 30px;
+    }
+
+    /* section-2: skills */
+    .skills-section {
+        padding: 0 20px;
+    }
+    .skills-section .cells .cell span {
+        font-size: 13px;
+    }
+}
+
+/*SECTION-3 PROJECTS*/
+/* Projects Section */
+.projects-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.projects-section h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.projects-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.project-card h3 {
+    font-size: 22px;
+    color: var(--text-color);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Popup Styles */
+.popup {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 400px;
+    height: 100%;
+    background-color: white;
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    z-index: 1000;
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+}
+
+.popup.open {
+    right: 0;
+}
+
+.popup-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.popup h3 {
+    font-size: 20px;
+    color: var(--text-color);
+}
+
+.popup-description {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+.popup-description p {
+    margin-bottom: 15px; 
+    line-height: 1.6; 
+}
+.view-project {
+    font-size: 14px;
+    color: #888;
+    text-decoration: none;
+    margin-top: auto;
+    transition: color 0.2s ease-in-out;
+}
+
+.view-project:hover {
+    color: var(--link-color);
+}
+
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: -25px; 
+    right: -15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-color);
+    background-color: transparent; 
+    border: none;
+    padding: 5px; 
+    z-index: 1001;
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+    .popup {
+        width: 90%;
+    }
+}
+
+/*Section-4 EXPERIENEC*/
+/* Experience Section */
+.experience-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.experience-section h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.experience-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.experience-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* Add this to create a positioning context for children */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.experience-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.experience-content h3 {
+    font-size: 22px;
+    color: var(--text-color);
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.experience-content h4 {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.experience-content .duration {
+    font-size: 14px;
+    font-style: italic;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+.experience-content p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.experience-content ul {
+    margin-top: 10px;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.experience-content ul li {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.view-certificate {
+    font-size: 13px;
+    color: #888;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    text-decoration: underline;
+    padding: 5px 10px;
+    transition: color 0.2s ease-in-out;
+        
+}
+
+.view-certificate:hover {
+    color: var(--link-color); /* Highlight on hover */
+}
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .experience-section {
+        padding: 0 20px;
+    }
+
+    .experience-item {
+        padding: 15px;
+    }
+}
+
+/*SECTION-5: ACHIEVEMENTS*/
+
+.achievements-section {
+    padding: 0 50px;
+    margin-bottom: 50px;
+}
+
+.achievements-section h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.achievements-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Achievement Cards */
+.achievement-card {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 250px; /* Fixed width for consistency */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.achievement-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.achievement-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.achievement-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+    flex-grow: 1; /* Ensures equal spacing between title and link */
+}
+
+/* View Certification Link */
+.view-certification {
+    font-size: 13px;
+    color: #888;
+    text-decoration: none;
+    margin-top: auto; /* Push link to bottom */
+    transition: color 0.2s ease-in-out;
+}
+
+.view-certification:hover {
+    color: var(--link-color); /* Highlight on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .achievements-grid {
+        gap: 10px;
+    }
+
+    .achievement-card {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+
+/*SECTION:6 CONTACT*/
+.contact-section {
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.contact-section h2 {
+    font-size: 35px;
+}
+
+.contact-section .group {
+    display: flex;
+    gap: 50px;
+}
+
+.contact-section .group .text {
+    flex: 3;
+    margin-top: 20px;
+}
+
+.contact-section .group form {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section .group form input,
+.contact-section .group form textarea {
+    font-family: "Poppins" , sans-serif;
+    border: 2px solid var(--text-color);
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    outline: none;
+    resize: none;
+}
+.contact-section .group form button {
+    font-size: 16px;
+    font-family: 'Poppins' , sans-serif;
+    color: white;
+    background-color: blue;
+    border: none;
+    height: 50px;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.contact-section .group form button:hover {
+    filter: brightness(.9);
+}
+@media (max-width: 740px) {
+    .contact-section {
+        padding: 0 20px;
+    }
+    .contact-section .group {
+        flex-direction: column;
+    }
+    
+}
+
+
+
+

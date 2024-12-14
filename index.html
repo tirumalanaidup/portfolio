@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Potfolio</title>
+</head>
+<body>
+
+    
+    <!--NAVBAR-->
+    <nav>
+        <div class="left">
+            <a href="/">Tirumala naidu</a>
+        </div>
+        <div class="right">
+            <a href="http://github.com" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+                <span>Github</span>
+            </a>
+            <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>linkedin</span>
+            </a>
+            <a href="http://mailto:tarun.200316@gmail.com"  target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Gmail</span>
+            </a>
+
+        </div>
+    </nav>
+    <main>
+        <!--Section-1: HERO-->
+        <section class="hero-section">
+            <div class="text">
+                <h2>Hi I am Tirumala Naidu👋</h2>
+                <p>As a dedicated Computer Science undergraduate with a great foundation in programming and problem-solving, my shortterm goal is to secure an entry-level position in the field of software development or related areas. I am eager to contribute
+                    my technical skills, passion for innovation, and drive for excellence to a dynamic team and organization. With a keen
+                    interest in exploring emerging technologies and a commitment to continuous learning.</p>
+                <div class="links">
+                    <a href="#skills">
+                        <i class="fa-solid fa-code"></i>
+                        <span>Skills</span>
+                    </a>
+
+                    <a href="#projects">
+                        <i class="fa-solid fa-diagram-project"></i>
+                        <span>Projects</span>
+                    </a>
+
+                    <a href="#experience">
+                        <i class="fa-solid fa-arrows-spin"></i>
+                        <span>Experience</span>
+                    </a>
+
+                    <a href="#achievements">
+                        <i class="fa-solid fa-star"></i>
+                        <span>Achievements</span>
+                    </a>
+
+                    <a href="#contact">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="headshot">
+                <img src="pictures/headshot1.jpg" alt="Tarun naidu headshot">
+            </div>
+        </section>
+        <!--Section-2: skills-->
+        <section id="skills" class="skills-section">
+            <h2>Skills</h2>
+            <div class="text">
+                I am well-versed in programming languages like C and Python, alongside a solid grasp of web technologies such as HTML, CSS, and JavaScript. I am familiar with database management using SQL and have experience with tools like MS Excel, MS PowerPoint, VS Code, and Figma. Additionally, I hold a foundational knowledge of cloud technologies, particularly AWS, and core computer science concepts such as OOPS, DBMS, and computer networking. 
+            </div>
+            <div class="cells">
+                <div class="cell">
+                    <img src="pictures/html_logo.png" alt="html_logo">
+                    <span>HTML</span>
+                </div>
+                <div class="cell">
+                    <img src="pictures/js-logo.png" alt="javascript_logo">
+                    <span>JavaScript</span>
+                </div>
+                <div class="cell">
+                    <img src="pictures/css_logo.png" alt="css_logo">
+                    <span>CSS</span>
+                </div>
+                <div class="cell">
+                    <img src="pictures/python_logo.png" alt="python-logo">
+                    <span>Python</span>
+                </div>
+                <div class="cell">
+                    <img src="pictures/c_logo.png" alt="C_logo">
+                    <span>C</span>
+                </div>
+            </div>
+
+        </section>
+
+        
+        <!--Section-3: Projects-->
+        <section id="projects" class="projects-section">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <!-- Project Card -->
+                <div class="project-card">
+                    <h4>Detecting Online Job Scams Using Deep Learning and Data Mining</h4>
+                    <a href="javascript:void(0);" class="view-project" 
+                        onclick="openPopup(
+                            'Detecting Online Job Scams Using Deep Learning and Data Mining',
+                            [
+                                '> Aims to predict fraudulent job postings using various data mining and machine learning techniques.',
+                                '> Predicts fraudulent job postings using machine learning techniques: KNN, Decision Tree, SVM, Naive Bayes, Random Forest, MLP, and Deep Neural Networks.',
+                                '> Uses the EMSCAD dataset containing 18,000 samples with attributes like job title, company profile, salary range, and employment type.',
+                                '> Achieves 99% accuracy in detecting fraudulent job posts using the Deep Neural Network model.',
+                                '> Provides an automated solution to enhance the security of job seekers in the digital age.',
+                                '> Technologies: Python, TensorFlow, Deep Neural Networks, SVM'
+                            ]
+                        )">
+                        <u>click here</u>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Side Popup -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="close-btn" onclick="closePopup()">&times;</span>
+                <h3 id="popup-title">Project Title</h3>
+                <div id="popup-description" class="popup-description">
+                    <!-- Dynamic description will be added here -->
+                </div>
+            </div>
+        </div>
+        
+        <!--Section-4 EXPERIENEC-->
+        <section id="experience" class="experience-section">
+            <h2>Experience</h2>
+            <div class="experience-timeline">
+                <!-- Experience Item -->
+                <div class="experience-item">
+                    <div class="experience-content">
+                        <a href="https://drive.google.com/file/d/16_9UPx6uqT1CTZz5__FPaAH_aU_qXB9z/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="view-certificate">
+                            View Certification
+                        </a>
+                        <h3>AI-ML Virtual Intern</h3>
+                        <h4>EduSkills</h4>
+                        <p class="duration">September 2023 - November 2023</p>
+                        <p>Developed a strong understanding of cloud computing and AI-ML technologies through practical applications.</p>
+                        <ul>
+                            <li>Gained hands-on experience in cloud computing and AI-ML technologies.</li>
+                            <li>Gained practical exposure to cloud architecture, data storage, and AI-driven automation through guided exercises.</li>
+                        </ul>
+                    </div>
+                </div>
+        
+                <!-- Experience Item -->
+                <div class="experience-item">
+                    <div class="experience-content">
+                        <a href="https://drive.google.com/file/d/1W8oVQVEgvPL2pe_kIdnhbNbOaUsX6DuS/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="view-certificate">
+                            View Certification
+                        </a>
+                        <h3>Python Development Virtual Intern</h3>
+                        <h4>Octanet Services PVT LTD.</h4>
+                        <p class="duration">July 2024 - September 2024</p>
+                        <p>Strengthened Python programming skills through hands-on experience.</p>
+                        <ul>
+                            <li>Improved problem-solving abilities by working on complex tasks and optimizing solutions for scalability.</li>
+                            <li>Improved technical expertise by working on real-world projects</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+
+        <!--Section-5: Achievements-->
+        <section id="achievements" class="achievements-section">
+            <h2>Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <h3>Cloud Computing</h3>
+                    <p>Earned Certification of NPTEL in Cloud Computing.</p>
+                    <a href="https://drive.google.com/file/d/1ASD_bGgznXo8FFbnYu7_dzcq-248FHaS/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="view-certification">
+                        <u>View Certification</u>
+                    </a>
+                </div>
+                <div class="achievement-card">
+                    <h3>Programming in Java</h3>
+                    <p>Earned Certification of NPTEL in Programming in Java.</p>
+                    <a href="https://drive.google.com/file/d/1NqjLJJfb1_TyIGbai5WLLhlNlZ0AkSgp/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="view-certification">
+                        <u>View Certification</u>
+                    </a>
+                </div>
+                <div class="achievement-card">
+                    <h3>Introduction to C</h3>
+                    <p>Earned Certification of NPTEL in Introduction to C.</p>
+                    <a href="https://drive.google.com/file/d/1epv-nZH-nYEJDHO5NV88wRredjNah0cA/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="view-certification">
+                        <u>View Certification</u>
+                    </a>
+                </div>
+                <div class="achievement-card">
+                    <h3>Excel</h3>
+                    <p>Earned Certification from Great Learning Academy in Excel.</p>
+                    <a href="https://drive.google.com/file/d/19uR67m19MRCb3NRpKsC3TDC-zpc-r2YC/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="view-certification">
+                        <u>View Certification</u>
+                    </a>
+                </div>
+                <!-- Add more certifications as needed -->
+            </div>
+        </section>
+        
+        <!--Section-6: Contact-->
+        <section id="contact" class="contact-section">
+            <h2>Contact</h2>
+            <div class="group">
+                <div class="text">
+                    <p>I'm always excited to collaborate on projects, discuss ideas, or explore new opportunities. Whether you're looking to partner on a project, share feedback, or just say hello, feel free to drop me a message. I'll do my best to get back to you as soon as possible!</p>
+                </div>
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+
+                    <label for="meassage">Message</label>
+                    <textarea id="meassage" cols="30" rows="10"></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+
+            </div>
+        </section>
+    </main>
+    <script>
+        let popupVisible = false;
+        let lastScrollPosition = window.scrollY;
+    
+        function openPopup(title, descriptionParagraphs) {
+            document.getElementById('popup-title').innerText = title;
+            
+            const descriptionContainer = document.getElementById('popup-description');
+            descriptionContainer.innerHTML = ''; // Clear previous content
+    
+            descriptionParagraphs.forEach(paragraph => {
+                const p = document.createElement('p');
+                p.innerText = paragraph;
+                descriptionContainer.appendChild(p);
+            });
+    
+            const popup = document.getElementById('popup');
+            popup.classList.add('open');
+            popupVisible = true;
+    
+            // Disable background scroll
+            document.body.style.overflow = 'hidden';
+    
+            // Track last scroll position
+            lastScrollPosition = window.scrollY;
+    
+            // Add event listener to detect scroll on the outer area
+            window.addEventListener('scroll', handleScrollOutsidePopup);
+        }
+    
+        function closePopup() {
+            const popup = document.getElementById('popup');
+            popup.classList.remove('open');
+            popupVisible = false;
+    
+            // Re-enable background scroll
+            document.body.style.overflow = '';
+    
+            // Remove event listener for scroll
+            window.removeEventListener('scroll', handleScrollOutsidePopup);
+        }
+    
+        // Function to handle scroll event
+        function handleScrollOutsidePopup() {
+            if (popupVisible && window.scrollY !== lastScrollPosition) {
+                closePopup();
+            }
+        }
+    </script>
+    
+</body>
+</html>
