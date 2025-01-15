@@ -201,7 +201,6 @@ nav .right a span {
     text-align: center;
     font-size: 35px;
     margin-bottom: 20px;
-    color: var(--text-color);
 }
 
 .projects-grid {
@@ -317,7 +316,7 @@ nav .right a span {
     text-align: center;
     font-size: 35px;
     margin-bottom: 20px;
-    color: var(--text-color);
+    
 }
 
 .experience-timeline {
@@ -418,7 +417,7 @@ nav .right a span {
     text-align: center;
     font-size: 30px;
     margin-bottom: 20px;
-    color: var(--text-color);
+
 }
 
 .achievements-grid {
@@ -487,64 +486,70 @@ nav .right a span {
 
 /*SECTION:6 CONTACT*/
 .contact-section {
-    padding: 0 50px;
-    margin-bottom: 100px;
+    text-align: center;
+    padding: 40px;
+    
 }
 
 .contact-section h2 {
-    font-size: 35px;
+    font-size: 30px;
+    margin-bottom: 20px;
 }
 
-.contact-section .group {
+.contact-icons {
     display: flex;
+    justify-content: center;
     gap: 50px;
 }
 
-.contact-section .group .text {
-    flex: 3;
-    margin-top: 20px;
-}
-
-.contact-section .group form {
-    flex: 3;
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-section .group form input,
-.contact-section .group form textarea {
-    font-family: "Poppins" , sans-serif;
-    border: 2px solid var(--text-color);
-    background-color: transparent;
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 15px;
-    outline: none;
-    resize: none;
-}
-.contact-section .group form button {
-    font-size: 16px;
-    font-family: 'Poppins' , sans-serif;
-    color: white;
-    background-color: blue;
-    border: none;
+/* Styling for the icons */
+.contact-icon {
+    display: inline-block;
+    width: 50px;
     height: 50px;
-    cursor: pointer;
-    transition: .1s;
+    border-radius: 50%;
+    background-color: #333;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.contact-section .group form button:hover {
-    filter: brightness(.9);
+/* Hover effect for the icons */
+.contact-icon:hover {
+    transform: translateY(-10px);
 }
-@media (max-width: 740px) {
-    .contact-section {
-        padding: 0 20px;
-    }
-    .contact-section .group {
-        flex-direction: column;
-    }
-    
+
+/* Specific hover effects for each icon (customization for each icon) */
+.linkedin:hover {
+    background-color: #0073b1; /* LinkedIn color */
 }
+
+.github:hover {
+    background-color: #333; /* GitHub color */
+}
+
+.mail:hover {
+    background-color: #dd240b; /* Mail color */
+}
+
+/* Corrected hover effect for the contact icon */
+.contact:hover {
+    background-color: #289d28; /* Contact color */
+}
+.message:hover {
+    background-color: #0e76a8; /* Message color (you can change this) */
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+  
 
 
 
